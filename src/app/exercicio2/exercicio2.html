@@ -1,0 +1,23 @@
+<div class="cardPrincipal">
+  <h2>Calcular Valor</h2>
+
+  <div style="margin-bottom: 1rem">
+    <input
+      [(ngModel)]="valorQuilo"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o valor do quilo"
+      styles="margin-bottom: 0.5rem;"
+    />
+    <input
+      [(ngModel)]="quantidade"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe a quantidade"
+    />
+  </div>
+  <button class="botaoPadrao" (click)="calcularValor()">Calcular valor</button>
+  <div *ngIf="total !== null" style="margin-top: 1rem; font-weght: bold">
+    Resultado: {{total }}
+  </div>
+</div>

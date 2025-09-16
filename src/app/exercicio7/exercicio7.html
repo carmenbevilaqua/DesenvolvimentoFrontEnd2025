@@ -1,0 +1,20 @@
+<div class="cardPrincipal">
+<h2>Verificar Ímpar</h2>
+
+<div style="margin-bottom: 1rem">
+  <input
+    [(ngModel)]="numero"
+    class="inputPadrao"
+    type="number"
+    placeholder="Informe o número"
+    styles="margin-bottom: 0.5rem;"
+  />
+</div>
+<button class="botaoPadrao" (click)="verificarImpar()">Verificar número</button>
+<div
+  *ngIf="verificarImpar !== null"
+  style="margin-top: 1rem; font-weght: bold"
+>
+  {{ resultado }}
+</div>
+</div>
