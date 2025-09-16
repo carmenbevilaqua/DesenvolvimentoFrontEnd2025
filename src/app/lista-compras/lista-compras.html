@@ -1,0 +1,32 @@
+<div class="cardPrincipal">
+  <h2>Lista de Compras</h2>
+
+  <div style="margin-bottom: 1rem">
+    <input
+      [(ngModel)]="produto"
+      type="text"
+      class="inputPadrao"
+      placeholder="Nome do produto"
+    />
+    <input
+      [(ngModel)]="preco"
+      type="number"
+      class="inputPadrao"
+      placeholder="Preço"
+    />
+    <button class="botaoPadrao" (click)="adicionarProduto()">
+      Adicionar Produto
+    </button>
+  </div>
+
+  <ul>
+    <li *ngFor="let item of compras; let i = index">
+      {{ item.nome }} - R$ {{ item.valor.toFixed(2) }}
+      <button (click)="removerProduto(i)">Remover</button>
+    </li>
+  </ul>
+
+  <div *ngIf="compras.length > 0" style="margin-top: 1rem; font-weight: bold">
+    Valor Total: R$ {{ valorTotal.toFixed(2) }}
+  </div>
+</div>
