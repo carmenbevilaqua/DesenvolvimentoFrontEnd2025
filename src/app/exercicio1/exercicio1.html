@@ -1,0 +1,23 @@
+<div class="cardPrincipal">
+  <h2>Calcular Troco</h2>
+
+  <div style="margin-bottom: 1rem">
+    <input
+      [(ngModel)]="valorpago"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o valor pago"
+      styles="margin-bottom: 0.5rem;"
+    />
+    <input
+      [(ngModel)]="precoproduto"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o preço do produto"
+    />
+  </div>
+  <button class="botaoPadrao" (click)="calcularTroco()">Calcular troco</button>
+  <div *ngIf="resultado !== null" style="margin-top: 1rem; font-weght: bold">
+    Resultado: {{resultado }}
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="cardPrincipal">
+  <h2>Calculo Médias</h2>
+
+  <div style="margin-bottom: 1rem">
+    <input
+      [(ngModel)]="n1"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o primeiro número"
+      styles="margin-bottom: 0.5rem;"
+    />
+    <input
+      [(ngModel)]="n2"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o segundo número"
+      styles="margin-bottom: 0.5rem;"
+    />
+    <input
+      [(ngModel)]="n3"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o terceiro número"
+      styles="margin-bottom: 0.5rem;"
+    />
+  </div>
+  <button class="botaoPadrao" (click)="calcular()">Calcular Médias</button>
+  <div
+    *ngIf="mediaAritmetica !== null"
+    style="margin-top: 1rem; font-weght: bold"
+  >
+    <p>Média Aritmética: {{ mediaAritmetica }}</p>
+    <p>Média Ponderada: {{ mediaPonderada }}</p>
+    <p>Soma das Médias: {{ somaMedias }}</p>
+    <p>Médias das Médias: {{ mediaDasMedias }}</p>
+  </div>
+</div>

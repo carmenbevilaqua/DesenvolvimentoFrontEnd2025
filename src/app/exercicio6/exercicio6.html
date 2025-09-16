@@ -1,0 +1,41 @@
+<div class="cardPrincipal">
+  <h2>Calculo Menor</h2>
+
+  <div style="margin-bottom: 1rem">
+    <input
+      [(ngModel)]="n1"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o primeiro número"
+      styles="margin-bottom: 0.5rem;"
+    />
+    <input
+      [(ngModel)]="n2"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o segundo número"
+      styles="margin-bottom: 0.5rem;"
+    />
+    <input
+      [(ngModel)]="n3"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o tereiro número"
+      styles="margin-bottom: 0.5rem;"
+    />
+    <input
+      [(ngModel)]="n4"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o quarto número"
+      styles="margin-bottom: 0.5rem;"
+    />
+  </div>
+  <button class="botaoPadrao" (click)="calcularMenor()">Verificar Menor</button>
+  <div
+    *ngIf="calcularMenor !== null"
+    style="margin-top: 1rem; font-weght: bold"
+  >
+    <p>O menor valor é: {{ menor }}</p>
+  </div>
+</div>
