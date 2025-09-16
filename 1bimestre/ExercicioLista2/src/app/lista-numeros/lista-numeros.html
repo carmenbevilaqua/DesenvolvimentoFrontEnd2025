@@ -1,0 +1,25 @@
+<div class="cardPrincipal">
+  <h2>Lista de Números</h2>
+
+  <div style="margin-bottom: 1rem">
+    <input
+      [(ngModel)]="numero"
+      class="inputPadrao"
+      type="number"
+      placeholder="Digite um número"
+    />
+    <button class="botaoPadrao" (click)="adicionarNumero()">Adicionar</button>
+  </div>
+
+  <ul>
+    <li *ngFor="let n of numeros; let i = index">
+      {{ n }}
+      <button (click)="removerNumero(i)">Remover</button>
+    </li>
+  </ul>
+
+  <div *ngIf="numeros.length > 0" style="margin-top: 1rem">
+    <p><strong>Soma:</strong> {{ soma }}</p>
+    <p><strong>Média:</strong> {{ media }}</p>
+  </div>
+</div>
