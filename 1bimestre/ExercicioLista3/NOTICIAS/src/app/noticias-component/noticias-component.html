@@ -1,0 +1,8 @@
+<h2>Noticias</h2>
+
+<ul>
+  <li *ngFor="let noticia of noticias; let i = index">
+    {{ noticia }}
+    <a [routerLink]="['/detalhe']">Ler mais</a>
+  </li>
+</ul>
